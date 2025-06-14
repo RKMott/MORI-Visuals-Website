@@ -24,7 +24,7 @@ Database: NA
 Tools: VS Code, Photoshop, Github
 
 ## Folder Structure
-
+<pre> ```
 /
 ├── css/
 │   ├── about/
@@ -70,8 +70,7 @@ Tools: VS Code, Photoshop, Github
 ├── privacy.html
 ├── refund.html
 ├── terms.html
-
-<pre> ``` / ├── css/ │ ├── about/ │ │ └── aboutDefault.css │ ├── contact/ │ │ └── contactDefaults.css │ ├── gallery/ │ │ └── galleryDefault.css │ ├── home/ │ │ ├── aboutSection.css │ │ ├── contactSection.css │ │ ├── gallerySection.css │ │ ├── homeDefault.css │ │ └── testimonialSection.css │ ├── terms/ │ │ └── terms.css │ ├── defaults.css │ ├── footer.css │ └── navBar.css ├── images/ │ ├── about/ │ ├── footer/ │ ├── galleryPage/ │ │ ├── BTS/ │ │ ├── gig/ │ │ ├── nature/ │ │ └── street/ │ ├── header/ │ └── homePage/ │ ├── aboutSection/ │ └── gallerySection/ ├── js/ │ ├── fadeInOnScroll.js │ ├── faqToggleBox.js │ ├── headerSlideshow.js │ ├── navSmall.js │ └── testimonialAutoScroll.js ├── about.html ├── accessibility.html ├── contact.html ├── gallery.html ├── index.html ├── privacy.html ├── refund.html └── terms.html ``` </pre>
+``` </pre>
 
 ## Author
 Name:      Reece K. Mott
