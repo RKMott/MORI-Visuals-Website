@@ -1,0 +1,37 @@
+.secDefault {
+    min-height: 1000px;
+    max-height: content;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about, .testimonial {
+    background-color: #f8f7f2;
+}
+
+.gallery, .contact {
+    background-color: #a69981;
+}
+
+.mainContainer {
+    max-width: calc(100vh * 4 / 3);
+    width: 100%;
+    min-height: 900px;
+    max-height: content;
+}
+
+.mainContainer > * {
+    padding: 25px;
+}
+
+@media (max-width: 830px) {
+    .mainContainer {
+        max-width: 100%;
+    }
+
+    .secDefault {
+        padding: 10px;
+    }
+} 

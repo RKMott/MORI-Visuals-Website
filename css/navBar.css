@@ -1,0 +1,210 @@
+
+/* NavBar Styles */
+.navBar {
+    width: 100vw;
+    height: 100px;
+    min-height: content;
+    background-color: #353722;
+    padding: 0 clamp(30px, 3.75vw, 150px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo Styles */
+.txtLogo {
+    font-family: "elfreth", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f8f7f2;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* Navigation List Styles */
+.navList {
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    font-size: 3rem;
+    gap: clamp(30px,4vw, 200px);
+}
+
+/* Navigation List Item Styles */
+.navList li a {
+    cursor: pointer;
+    color: #f8f7f2;
+    text-decoration: none;
+}
+
+/* Navigation List Item Hover Styles */
+.navList li a:hover {
+    color: #a69981;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Line Down Styles, next to MORI txt Logo */
+.lineDown {
+    background-color: #f8f7f2;
+    width: clamp(1px, 0.5vw, 3px);
+    height: 70px;
+}
+
+/* Group for MORI txt logo and line down */
+.logoGroup {
+    display :flex;
+    align-items: center;
+    gap: clamp(20px, 2vw, 50px);
+}
+
+/* Hamburger Menu Styles */
+.hamburgerMenu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Hamburger Menu Span Styles */
+.hamburgerMenu span {
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #f8f7f2;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Hamburger Menu Active Styles */
+@media (max-width: 1140px) {
+    .navBar {
+        height: 60px;
+        position: fixed;
+        z-index: 9999;
+        box-shadow: 0 12px 32px 0 rgba(0,0,0,0.35), 0 2px 8px 0 rgba(0,0,0,1);
+        border-radius: 15px;
+        width: 95vw;
+        left: calc(100vw - 97.5vw);
+        top: 10px;
+        transition: 
+            border-radius 0.3s ease,
+            width 0.3s ease,
+            left 0.3s ease,
+            top 0.3s ease,
+            box-shadow 0.3s ease,
+            transform 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    .navBar.navBar--hidden {
+        transform: translateY(-120%);
+        box-shadow: none;
+    }
+
+    .lineDown {
+        height: 40px;
+    }
+
+    .logoGroup {
+        gap: 10px;
+    }
+
+    .navList {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0vw;
+        background: #a69981e0;
+        width: 100vw;
+        max-height: 0;
+        overflow: hidden;
+        gap: 150px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        z-index: 1000;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 0px;
+        opacity: 0;
+        pointer-events: none;
+        transition:
+            max-height 1s cubic-bezier(0.4,0,0.2,1),
+            opacity 0.5s ease,
+            transform 0.5s ease;
+    }
+
+    /* Show hamburger menu on smaller screens */
+    .hamburgerMenu {
+        display: flex;
+    }
+
+    /* Open nav list on button click */
+    .navList.active {
+        max-height: calc(100vh - 60px);
+        height: 100vh;
+        opacity: 1;
+        pointer-events: auto;
+        padding-top: 60px;
+    }
+
+    .navBar.active {
+        height: 60px;
+        position: fixed;
+        z-index: 9999;
+        box-shadow: 0;
+        border-radius: 0;
+        width: 100vw;
+        left: 0;
+        top: 0;
+    }
+
+    /* Hamburger styling when screen size is 1140px */
+    .navList li {
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        max-height: 0;
+        transition:
+            opacity 0.5s,
+            transform 0.4s;
+    }
+
+    /* Animation for each list item when nav is active */
+    .navList.active li {
+        animation: fadeInUp 0.5s forwards;
+        pointer-events: auto;
+        transition:
+            opacity 0.5s,
+            transform 0.5s;
+    }
+
+    /* Delay for each list item animation */
+    .navList.active li:nth-child(1) { animation-delay: 0.15s; }
+    .navList.active li:nth-child(2) { animation-delay: 0.30s; }
+    .navList.active li:nth-child(3) { animation-delay: 0.45s; }
+    .navList.active li:nth-child(4) { animation-delay: 0.60s; }
+
+    /* Hamburger menu active state styles */
+    .hamburgerMenu.active span:nth-child(1) { transform: rotate(45deg) translateY(15px); }
+    .hamburgerMenu.active span:nth-child(2) { opacity: 0; }
+    .hamburgerMenu.active span:nth-child(3) { transform: rotate(-45deg) translateY(-15px); }
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+

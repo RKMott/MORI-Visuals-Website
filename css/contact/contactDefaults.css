@@ -1,0 +1,154 @@
+.white {
+    background-color: #f8f7f2;
+}
+
+.tan {
+    background-color: #a69981;
+}
+
+.contactContainer {
+    background-color: #353722;
+    border: solid 3px #a69981;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%; /* or a fixed height if you want */
+}
+
+.contactContainer h3 {
+    color: white;
+    font-family: "elfreth", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(3rem, 5vw, 4rem);
+}
+
+.contactContainer form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+/* Simple contact form layout */
+.formRow {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 16px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 16px;
+}
+
+.formGroup label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #f8f7f2;
+}
+
+.formGroup input,
+.formGroup textarea {
+    padding: 10px;
+    border: 1px solid #a69981;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #f8f7f2;
+    color: #353722;
+    resize: vertical;
+}
+
+.formGroup textarea {
+    min-height: 120px; /* or 140px for even taller */
+    margin-top: 4px;
+}
+
+.contactSubmitBtn {
+    display: block;
+    margin: auto auto 0; /* top margin for spacing, auto for horizontal centering */
+    background: #353722;
+    color: #f8f7f2;
+    padding: 12px 32px;
+    border-radius:15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: solid 3px #a69981;
+    justify-self: flex-end;
+}
+
+.contactSubmitBtn:hover {
+    background: #a69981;
+    color: #353722;
+}
+
+.contactSubmitBtn:active {
+    background: #a69981af;
+}
+
+.email {
+    max-height: 100px;
+}
+
+.mainContainer {
+    max-width: calc(100vh * 4 / 3);
+    width: 100%;
+    min-height: 900px;
+    max-height: content;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.alternativeContact {
+    background-color: #353722;
+    border: solid 3px #a69981;
+    color: #f8f7f2;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.alternativeContact h3 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-family: "elfreth", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.alternativeContact h4 {
+    font-size: clamp(1.25rem, 4vw, 3rem);
+}
+
+.socialIconContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.socialIconContainer a {
+    height: clamp(125px, 12vw, 300px);
+    width: clamp(125px, 12vw, 300px);
+    display: flex;
+    justify-content: center;
+}
+
+.socialIconContainer a img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    .formRow {
+        flex-direction: column;
+        gap: 0;
+    }
+}

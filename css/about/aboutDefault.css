@@ -1,0 +1,202 @@
+.white {
+    background-color: #f8f7f2;
+}
+
+.tan {
+    background-color: #a69981
+}
+
+.secDefault {
+    min-height: 1000px;
+    max-height: content;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.extendedAbout {
+    background-color: #353722;
+    border: solid 3px #a69981;
+    color: #f8f7f2;
+}
+
+.mainContainer {
+    max-width: calc(100vh * 4 / 3);
+    width: 100%;
+    min-height: 900px;
+    max-height: content;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.extendedAbout h3 {
+    font-size: clamp(3rem, 5vw, 5rem);
+    font-family: "elfreth", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.extendedAbout p {
+    font-size: 1.2rem;
+}
+
+.ppFrame {
+    width: 200px;
+    height: 200px;
+    border: solid 3px #a69981;
+    border-radius: 50%;
+    background-color: white;
+    overflow: hidden; /* Ensures the image is clipped to the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: flex-end;
+    margin-top: 50px;
+}
+
+.ppFrame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.testimonial {
+    background-color: #353722;
+    border: solid 3px #a69981;
+    color: #f8f7f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 700px;
+    min-height: 0;
+}
+
+.testimonial img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 10px 10px 0 #6c3d22;
+}
+
+.testimonialCard {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    justify-content: center;
+}
+
+.testimonialCard span {
+    font-size: 0.95rem;
+    color: #a69981;
+    font-style: italic;
+    align-self: flex-end;
+}
+
+.testimonialCard p {
+    line-height: 2;
+}
+
+.faq {
+    background-color: #353722;
+    border: solid 3px #a69981;
+    color: #f8f7f2;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.faq h3 {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-family: "elfreth", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.faqBox {
+    width: 100%;
+    min-height: content;
+    border: solid 3px #a69981;
+    border-radius: 15px;
+    margin: 20px;
+    background: #2d2e1e; /* slightly darker than .faq */
+    box-shadow: inset 0 4px 24px rgba(0,0,0,0.25); /* inset shadow for indented look */
+    padding: 20px;   /* indent content */
+    overflow: hidden;
+    height: content; /* enough for h4 and hr */
+    cursor: pointer;
+    position: relative;
+    max-height: 200px; /* enough for h4 and hr, adjust as needed */
+    transition: max-height 1s cubic-bezier(0.9,0,0,1);
+}
+
+.faqBox h4 {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-family: "elfreth", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 10px;
+}
+
+.faqBox p {
+    margin-top: 20px;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    opacity: 0;
+    transform: translateY(-30px);
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition:
+        opacity 0.4s cubic-bezier(0.4,0,0.2,1),
+        transform 0.4s cubic-bezier(0.4,0,0.2,1),
+        max-height 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+
+.fawBox hr {
+    color: #a69981;
+}
+
+.faqBox.expanded {
+    max-height: 10000px; /* large enough for any answer, or use JS for auto */
+}
+
+.faqBox.expanded p {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px; /* large enough for your answer */
+    pointer-events: auto;
+}
+
+@media (max-width: 830px) {
+    .mainContainer {
+        max-width: 95%;
+    }
+
+    .secDefault {
+        padding: 5px;
+    }
+
+    .testimonial {
+    flex-flow: column;
+    }
+
+    .testimonialCard {
+    width: 95%;
+    }
+
+    .testimonial img {
+    width: 95%;
+    height: 50%;
+    margin-bottom: 15px;
+    }
+
+    .testimonial.reverse {
+        flex-flow: column-reverse;
+    }
+}

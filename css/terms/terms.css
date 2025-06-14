@@ -1,0 +1,48 @@
+.white {
+    background-color: #f8f7f2;
+}
+
+.secDefault {
+    height: content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.mainContainer {
+    max-width: calc(100vh * 4 / 3);
+    width: 100%;
+    min-height: 900px;
+    max-height: content;
+    padding: 25px;
+}
+
+.termsContainer {
+    background-color: #353722;
+    border: solid 3px #a69981;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    height: 100%; /* or a fixed height if you want */
+    color: #f8f7f2;
+    padding: 50px;
+}
+
+.termsContainer h3 {
+    text-decoration: underline;
+    font-size: 2rem;
+    margin-top: 50px;
+}
+
+.termsContainer p,.termsContainer ul {
+    font-size: 1.25rem;
+    margin-left: 10px;
+}
+
+.lastOf {
+    margin-bottom: 50px;
+}
+
+a {
+    color: #f8f7f2;
+}

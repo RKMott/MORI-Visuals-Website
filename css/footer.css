@@ -1,0 +1,168 @@
+footer {
+    max-height: content;
+    width: 100vw;
+    background-color: #353722;
+    display: grid;
+    grid-template-areas:
+        "nav logo socials"
+        "tNc tNc tNc"
+        "copyright copyright copyright";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5fr 2fr 2fr;
+    padding: 20px;
+}
+
+.logoFooter img {
+    max-width: 80%;
+    max-height: 80%;
+    max-width: 300px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.navFooter {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navFooter ul {
+    display: flex;
+    flex-flow: column;
+    list-style: none;
+    justify-content: center;
+    font-size: 2rem;
+    gap: 30px;
+}
+
+.navFooter ul li a{
+    cursor: pointer;
+    color: #f8f7f2;
+    text-decoration: none;
+    font-size: 2.5rem;
+}
+
+.navFooter ul li a:hover {
+    color: #a69981;
+    transition: color 0.3s ease-in-out;
+}
+
+.logoFooter {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialsFooter {
+    grid-area: socials;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #f8f7f2;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+.socialsFooter a img {
+    max-width: 90px;
+    max-height: 90px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 15px;
+    object-fit: contain;
+}
+
+.socialContainer {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyrightFooter {
+    grid-area: copyright;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 15px;
+    color: #f8f7f2;
+}
+
+.tNcFooter {
+    grid-area: tNc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tNcFooter ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.tNcFooter ul li a{
+    cursor: pointer;
+    color: #f8f7f2;
+    text-decoration: none;
+    font-size: clamp(0.7rem, 1vw, 1rem);
+}
+
+.tNcFooter ul li a:hover {
+    color: #a69981;
+    transition: color 0.3s ease-in-out;
+}
+
+.lineDownTNC {
+    background-color: #f8f7f2;
+    width: 1px;
+    height: 30px;
+}
+
+@media (max-width: 900px), (max-width: 37.5em)  {
+    footer {
+        grid-template-areas:
+            "logo"
+            "nav"
+            "socials"
+            "copyright"
+            "tNc";
+        grid-template-columns: 100vw;
+        grid-template-rows: auto auto auto auto auto;
+        padding: 20px 0;
+    }
+    .logoFooter,
+    .navFooter,
+    .socialsFooter,
+    .copyrightFooter,
+    .tNcFooter {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 50px 0;
+    }
+    .navFooter ul {
+        gap: 20px;
+    }
+    .socialsFooter {
+        gap: 20px;
+    }
+    .tNcFooter ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+}
+
+

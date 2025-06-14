@@ -1,0 +1,150 @@
+.white {
+    background-color: #f8f7f2;
+}
+
+.tan {
+    background-color: #a69981;
+}
+
+.mainContainer {
+    max-width: calc(100vh * 4 / 3);
+    width: 100%;
+    min-height: 900px;
+    max-height: content;
+    padding: 25px;
+}
+
+.galleryGridStreet {
+    display: grid;
+    grid-template-areas: 
+    "img1Street img1Street img2Street"
+    "img3Street img4Street img2Street"
+    "img3Street img5Street img5Street";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, calc(1000px / 3));
+    gap: 10px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.galleryGridStreet img,
+.galleryGridGig img,
+.galleryGridNature img,
+.galleryGridBTS img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+}
+
+.galleryGridStreet img:nth-child(1) { grid-area: img1Street; }
+.galleryGridStreet img:nth-child(2) { grid-area: img2Street; }
+.galleryGridStreet img:nth-child(3) { grid-area: img3Street; }
+.galleryGridStreet img:nth-child(4) { grid-area: img4Street; }
+.galleryGridStreet img:nth-child(5) { grid-area: img5Street; }
+
+.galleryGridGig {
+    display: grid;
+    grid-template-areas: 
+    "img1Gig img2Gig img3Gig"
+    "img4Gig img2Gig img5Gig"
+    "img4Gig img6Gig img7Gig";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, calc(1000px / 3));
+    gap: 10px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.galleryGridGig img:nth-child(1) { grid-area: img1Gig; }
+.galleryGridGig img:nth-child(2) { grid-area: img2Gig; }
+.galleryGridGig img:nth-child(3) { grid-area: img3Gig; }
+.galleryGridGig img:nth-child(4) { grid-area: img4Gig; }
+.galleryGridGig img:nth-child(5) { grid-area: img5Gig; }
+.galleryGridGig img:nth-child(6) { grid-area: img6Gig; }
+.galleryGridGig img:nth-child(7) { grid-area: img7Gig; }
+
+.galleryGridNature {
+    display: grid;
+    grid-template-areas: 
+    "img1Nature img1Nature img2Nature"
+    "img3Nature img4Nature img2Nature"
+    "img3Nature img5Nature img5Nature";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, calc(1000px / 3));
+    gap: 10px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.galleryGridNature img:nth-child(1) { grid-area: img1Nature; }
+.galleryGridNature img:nth-child(2) { grid-area: img2Nature; }
+.galleryGridNature img:nth-child(3) { grid-area: img3Nature; transform: scaleX(-1) }
+.galleryGridNature img:nth-child(4) { grid-area: img4Nature; }
+.galleryGridNature img:nth-child(5) { grid-area: img5Nature; }
+
+.galleryGridBTS {
+    display: grid;
+    grid-template-areas: 
+    "img1BTS img2BTS img3BTS"
+    "img4BTS img2BTS img5BTS"
+    "img4BTS img6BTS img7BTS";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, calc(1000px / 3));
+    gap: 10px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.galleryGridBTS img:nth-child(1) { grid-area: img1BTS; }
+.galleryGridBTS img:nth-child(2) { grid-area: img2BTS; }
+.galleryGridBTS img:nth-child(3) { grid-area: img3BTS; }
+.galleryGridBTS img:nth-child(4) { grid-area: img4BTS; }
+.galleryGridBTS img:nth-child(5) { grid-area: img5BTS; }
+.galleryGridBTS img:nth-child(6) { grid-area: img6BTS; }
+.galleryGridBTS img:nth-child(7) { grid-area: img7BTS; }
+
+@media (max-width: 830px) {
+    .galleryGridBTS {
+        grid-template-areas:
+            "img1BTS img2BTS"
+            "img3BTS img2BTS"
+            "img4BTS img5BTS"
+            "img4BTS img6BTS"
+            "img7BTS img7BTS";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, calc(1000px / 5));
+    }
+
+    .galleryGridNature {
+        grid-template-areas:
+            "img1Nature img2Nature"
+            "img3Nature img2Nature"
+            "img3Nature img4Nature"
+            "img5Nature img5Nature";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, calc(1000px / 4));
+    }
+
+    .galleryGridStreet {
+        grid-template-areas:
+            "img1Street img2Street"
+            "img3Street img2Street"
+            "img3Street img4Street"
+            "img5Street img5Street";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, calc(1000px / 4));
+    }
+
+    .galleryGridGig {
+        grid-template-areas:
+            "img1Gig img2Gig"
+            "img3Gig img2Gig"
+            "img4Gig img5Gig"
+            "img4Gig img6Gig"
+            "img7Gig img7Gig";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, calc(1000px / 5));
+    }
+}
