@@ -4,7 +4,10 @@ A custom e-commerce solution for a professional solo photography business under 
 
 ## Screenshots
 
-
+![contact page](screenshots/contact-form.png)
+![about page](screenshots/faq-section.png)
+![gallery page](screenshots/gallery-grid-layout.png)
+![home page](screenshots/testimonial-slideshow.png)
 
 ## Features
 
@@ -23,51 +26,51 @@ Tools: VS Code, Photoshop, Github
 ## Folder Structure
 
 /
-|-css/
-      |-about/
-              |-aboutDefault.css
-      |-contact/
-              |-contactDefaults.css
-      |-gallery/
-              |-galleryDefaults.css
-      |-home/
-              |-aboutSection.css
-              |-contactSection.css
-              |-gallerrySection.css
-              |-homeDefault.css
-              |-testimonialSection.css
-      |-terms/
-              |-terms.css
-      |-defaults.css
-      |-footer.css
-      |-header.css
-      |-navBar.css
-|-images/
-      |-about
-      |-footer
-      |-galleryPage/
-              |-BTS
-              |-gig
-              |-nature
-              |-street
-      |-header
-      |-homePage/
-              |-aboutSection
-              |-gallerySection
-|-js/
-      |-fadeInOnScroll.js
-      |-faqToggleBox.js
-      |-headerSlideshow.js
-      |-navSmall
-      |-testimonialAutoScroll.js
-|-about.html
-|-accessibility.html
-|-contact.html
-|-gallery.html
-|-index.html
-|-privacy.html
-|-refund.html
-|-terms.html
+├── css/
+│   ├── about/
+│   │   └── aboutDefault.css
+│   ├── contact/
+│   │   └── contactDefaults.css
+│   ├── gallery/
+│   │   └── galleryDefault.css
+│   ├── home/
+│   │   ├── aboutSection.css
+│   │   ├── contactSection.css
+│   │   ├── gallerySection.css
+│   │   ├── homeDefault.css
+│   │   └── testimonialSection.css
+│   ├── terms/
+│   │   └── terms.css
+│   ├── defaults.css
+│   ├── footer.css
+│   └── navBar.css
+├── images/
+│   ├── about/
+│   ├── footer/
+│   ├── galleryPage/
+│   │   ├── BTS/
+│   │   ├── gig/
+│   │   ├── nature/
+│   │   └── street/
+│   ├── header/
+│   └── homePage/
+│       ├── aboutSection/
+│       └── gallerySection/
+├── js/
+│   ├── fadeInOnScroll.js
+│   ├── faqToggleBox.js
+│   ├── headerSlideshow.js
+│   ├── navSmall.js
+│   └── testimonialAutoScroll.js
+├── about.html
+├── accessibility.html
+├── contact.html
+├── gallery.html
+├── index.html
+├── privacy.html
+├── refund.html
+├── terms.html
+
 
 ## Author
 Name:      Reece K. Mott
